@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -250,17 +251,21 @@
 
                 <div class="col-lg-12">
                     <div class="row">
+
+                        
+                        {% for posts in jobs_content %}
                         <div class="col-md-6">
                             <div class="trainer-item">
                                 <div class="image-thumb">
-                                    <img src="{% static 'images/product-1-720x480.jpg' %}" alt="">
+                                    {% comment %} <img src="{% static 'images/product-1-720x480.jpg' %}" alt=""> {% endcomment %}
+                                    <img src="{{posts.img.url}}" alt="" width=340 height=225>
                                 </div>
                                 <div class="down-content">
-                                    <span> <sup>$</sup>70 000 </span>
+                                    <span>{{posts.location}} </span>
 
-                                    <h4>Lorem ipsum dolor sit amet, consectetur</h4>
+                                    <h4>{{posts.title}}</h4>
 
-                                    <p>Medical &nbsp;/&nbsp; Health Jobs</p>
+                                    <p>{{posts.description}}</p>
 
                                     <ul class="social-icons">
                                         <li><a href="details.html">+ View More</a></li>
@@ -268,6 +273,13 @@
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
+
+
+
+                        
+
+
                         <div class="col-md-6">
                             <div class="trainer-item">
                                 <div class="image-thumb">
@@ -286,6 +298,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                         <div class="col-md-6">
                             <div class="trainer-item">
                                 <div class="image-thumb">

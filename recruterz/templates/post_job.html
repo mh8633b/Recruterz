@@ -26,43 +26,43 @@
                 {% csrf_token %}
                 <center>
                     <div class="cta-content">
-                        <h2><em>Register</em></h2>
+                        <h2><em>Post Job</em></h2>
                     </div>
                 </center>
                 <br>
                 <div class="row">
 
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-12 col-sm-12">
                         <fieldset>
-                            <input name="Title" type="text" id="firstname" placeholder="First Name" required="">
-                        </fieldset>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <fieldset>
-                            <input name="lastname" type="text" id="lastname" placeholder="Last Name" required="">
+                            <input name="title" type="text" id="title" placeholder="Title" required="">
                         </fieldset>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <fieldset>
-                            <input name="username" type="text" id="username" placeholder="Username" required="">
+                            <textarea name="description" type="textfield" id="description" placeholder="Description" required=""></textarea>
                         </fieldset>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <fieldset>
-                            <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email"
+                            <input name="location" type="text" id="location" placeholder="Location" required="">
+                        </fieldset>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <fieldset>
+                            <input name="experince" type="text" id="experince" placeholder="Experince"
                                 required="">
                         </fieldset>
                     </div>
                     <div class="col-md-12 col-sm-12">
                         <fieldset>
-                            <input name="password" type="password" id="password" placeholder="Password">
+                            <input name="qualification" type="text" id="password" placeholder="Qualification">
                         </fieldset>
                     </div>
-                    <!-- <div class="col-md-12 col-sm-12">
+                    <div class="col-md-12 col-sm-12">
                         <fieldset>
-                            <input name="password1" type="password" id="password/" placeholder="Confirm Password">
+                            <input class="col-md-12 col-sm-12" type="file" name="cover" id="cover">
                         </fieldset>
-                    </div> -->
+                    </div>
                     <div class="col-lg-12">
                         <fieldset>
                             <button id="form-submit" class="main-button"><input type="submit" value="REGISTER"></button>
