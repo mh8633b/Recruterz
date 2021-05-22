@@ -11,3 +11,6 @@ class job(models.Model):
     img = models.ImageField(upload_to='pics')
     experince = models.CharField(max_length=100)
     qualification = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.title
