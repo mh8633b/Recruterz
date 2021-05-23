@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,20 +25,6 @@
 
 <body>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-        <div class="preloader-inner">
-            <span class="dot"></span>
-            <div class="dots">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-
-
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -45,22 +32,42 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="" class="logo">Recruiterz<em> Website</em></a>
+                        <a href='index' class="logo">Recruiterz<em> Website</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="" class="active">Home</a></li>
+                            <li><a href="/" class="active">Home</a></li>
                             <li><a href="{% url 'jobs' %}">Jobs</a></li>
                             <li><a href="{% url 'about' %}">About us</a></li>
-
                             {% if user.is_authenticated %}
-
+                            <!-- <li>Hello, {{user.firstname}} </li> -->
                             <li><a href="{% url 'logout' %}">logout</a></li>
                             {% else %}
                             <li><a href="{% url 'login' %}">Login</a></li>
                             <li><a href="{% url 'register' %}">Register</a></li>
 
                             {% endif %}
+                            <!-- <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
+                              
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="about.html">About Us</a>
+                                    <a class="dropdown-item" href="team.html">Team</a>
+                                    <a class="dropdown-item" href="blog.html">Blog</a>
+                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                                    <a class="dropdown-item" href="terms.html">Terms</a>
+                                </div>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li> -->
+
+
+
+                            <!-- {% if user.is_authenticated %}
+                            <li>Hello, {{user.firstname}} </li>
+                            <li><a href="login.html">logout</a></li>
+                            {% else %} -->
+
+                            <!-- {% endif %} -->
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
