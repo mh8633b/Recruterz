@@ -21,7 +21,7 @@
 
     <section class="section" id="contact-us" style="margin-top: 0">
         <!-- <div class="container-fluid"> -->
-        <div class="contact-form section-bg" style="background-image: url(static/images/contact-1-720x480.jpg)">
+        <div class="contact-form section-bg" style="style=" background-image: url({% static 'contact-1-720x480' %});">">
             <form id="contact" action="" method="post">
                 {% csrf_token %}
                 <center>
@@ -69,7 +69,7 @@
                         </fieldset>
                     </div>
                     {%for message in messages%}
-                    <h3>{{message}}</h3>    
+                    <h3>{{message}}</h3>
                     {%endfor%}
                 </div>
             </form>
