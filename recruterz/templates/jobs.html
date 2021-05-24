@@ -36,9 +36,10 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="/" class="active">Home</a></li>
-                            <li><a href="{% url 'jobs' %}">Jobs</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="{% url 'jobs' %}" class="active">Jobs</a></li>
                             <li><a href="{% url 'about' %}">About us</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
                             {% if user.is_authenticated %}
                             <!-- <li>Hello, {{user.firstname}} </li> -->
                             <li><a href="{% url 'logout' %}">logout</a></li>

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import job
-# `from jobs.models import job
+# from jobs.models import job
 # Create your views here.
 
 
@@ -12,6 +12,9 @@ def jobs(request):
 
 def about(request):
     return render(request, "about.html")
+
+def contact(request):
+    return render(request, "contact.html")
 
 
 def details(request):
