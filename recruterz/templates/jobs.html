@@ -48,27 +48,10 @@
                             <li><a href="{% url 'register' %}">Register</a></li>
 
                             {% endif %}
-                            <!-- <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-                              
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="about.html">About Us</a>
-                                    <a class="dropdown-item" href="team.html">Team</a>
-                                    <a class="dropdown-item" href="blog.html">Blog</a>
-                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                                    <a class="dropdown-item" href="terms.html">Terms</a>
-                                </div>
-                            </li>
-                            <li><a href="contact.html">Contact</a></li> -->
 
 
 
-                            <!-- {% if user.is_authenticated %}
-                            <li>Hello, {{user.firstname}} </li>
-                            <li><a href="login.html">logout</a></li>
-                            {% else %} -->
 
-                            <!-- {% endif %} -->
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -83,7 +66,7 @@
 
     <!-- ***** Call to Action Start ***** -->
     <section class="section section-bg" id="call-to-action"
-        style="background-image: url(static/images/banner-image-1-1920x500.jpg)">
+        style="background-image: url({% static 'images/banner-image-1-1920x500.jpg' %});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">

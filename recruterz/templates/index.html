@@ -90,47 +90,49 @@
     </div>
     <!-- ***** Main Banner Area End ***** -->
 
-    <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url('images/hero_1.jpg');">
-        <div class="container">
-            <div class="row mb-5 justify-content-center">
-                <div class="col-md-7 text-center">
-                    <h2 class="section-title mb-2 text-orange">Careers Statistics</h2>
-                    <p class="lead text-orange"></p>
+    <section class="py-5 bg-image overlay-primary fixed overlay">
+        <center>
+            <div class="container">
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-md-7 text-center">
+                        <h2 class="section-title mb-2 text-orange">Careers Statistics</h2>
+                        <p class="lead text-orange"></p>
+                    </div>
+                </div>
+                <div class="row pb-0 block__19738 section-counter">
+
+                    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <strong class="number" data-number="{{ candidates }}">0</strong>
+                        </div>
+                        <span class="caption">Candidates</span>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <strong class="number" data-number="{{ job_qs }}"> 0 </strong>
+                        </div>
+                        <span class="caption"> Jobs Posted</span>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <strong class="number" data-number="">0</strong>
+                        </div>
+                        <span class="caption">Jobs Filled</span>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <strong class="number" data-number="{{ company_name }}">0</strong>
+                        </div>
+                        <span class="caption">Companies</span>
+                    </div>
+
+
                 </div>
             </div>
-            <div class="row pb-0 block__19738 section-counter">
-
-                <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-                    <div class="d-flex align-items-center justify-content-center mb-2">
-                        <strong class="number" data-number="{{ candidates }}">0</strong>
-                    </div>
-                    <span class="caption">Candidates</span>
-                </div>
-
-                <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-                    <div class="d-flex align-items-center justify-content-center mb-2">
-                        <strong class="number" data-number="{{ job_qs }}"> 0 </strong>
-                    </div>
-                    <span class="caption"> Jobs Posted</span>
-                </div>
-
-                <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-                    <div class="d-flex align-items-center justify-content-center mb-2">
-                        <strong class="number" data-number="">0</strong>
-                    </div>
-                    <span class="caption">Jobs Filled</span>
-                </div>
-
-                <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-                    <div class="d-flex align-items-center justify-content-center mb-2">
-                        <strong class="number" data-number="{{ company_name }}">0</strong>
-                    </div>
-                    <span class="caption">Companies</span>
-                </div>
-
-
-            </div>
-        </div>
+        </center>
     </section>
 
 
@@ -163,7 +165,7 @@
                             <p>Medical &nbsp;/&nbsp; Health Jobs</p>
 
                             <ul class="social-icons">
-                                <li><a href="job-details.html">+ View More</a></li>
+                                <li><a href="{% url 'jobs' %}">+ View More</a></li>
                             </ul>
                         </div>
                     </div>
@@ -181,7 +183,7 @@
                             <p>Medical &nbsp;/&nbsp; Health Jobs</p>
 
                             <ul class="social-icons">
-                                <li><a href="job-details.html">+ View More</a></li>
+                                <li><a href="{% url 'jobs' %}">+ View More</a></li>
                             </ul>
                         </div>
                     </div>
@@ -199,7 +201,7 @@
                             <p>Computer &nbsp;/&nbsp; IT Jobs</p>
 
                             <ul class="social-icons">
-                                <li><a href="job-details.html">+ View More</a></li>
+                                <li><a href="{% url 'jobs' %}">+ View More</a></li>
                             </ul>
                         </div>
                     </div>
@@ -216,7 +218,7 @@
     <!-- ***** Cars Ends ***** -->
 
     <section class="section section-bg" id="schedule"
-        style="background-image: url(assets/images/about-fullscreen-1-1920x700.jpg)">
+        style="background-image: url({% static 'images/about-fullscreen-1-1920x700.jpg' %});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
@@ -303,10 +305,22 @@
         </div>
     </section> -->
     <!-- ***** Blog End ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
     <!-- ***** Call to Action Start ***** -->
-    <section class="section section-bg" id="call-to-action" style="background-image: url('{% static "
-        images/banner-image-1-1920x500.jpg" %}')">
+    <section class="section section-bg" id="call-to-action"
+        style="background-image: url({% static 'images/banner-image-1-1920x500.jpg' %});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
